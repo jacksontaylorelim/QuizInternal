@@ -1,5 +1,6 @@
 correct = "You got it... CORRECT!"
 incorrect = "You got it... incorrect"
+win = 0
 print("""Welcome to Jackson's RETRO GAME QUIZ
 You will be asked a series of multi-choice questions
 You will anwser either A, B, C or D
@@ -14,6 +15,7 @@ D) Toad
 Answer: """).strip().lower()
 if question1 == "b":
     print(correct)
+    win += 1
 else:
     print(incorrect)
 
@@ -26,6 +28,7 @@ D) Unicorn
 Answer: """).strip().lower()
 if question2 == "a":
     print(correct)
+    win += 1
 else:
     print(incorrect)
 
@@ -38,6 +41,7 @@ D) All of the above
 Answer: """).strip().lower()
 if question3 == "a":
     print(correct)
+    win += 1
 else:
     print(incorrect)
 
@@ -45,11 +49,12 @@ question4 = input("""
 What were all of the Pacman ghost names?
 A) Ghost 1, Ghost 2, Ghost 3 and Ghost 4
 B) Inkie, Winkie, Pinkie and Clint
-C) Stink, Winky, Tinky and Lyde
+C) Stinky, Winky, Tinky and Lyde
 D) Inky, Blinky, Pinky and Clyde
 Answer: """).strip().lower()
 if question4 == "d":
     print(correct)
+    win += 1
 else:
     print(incorrect)
 
@@ -62,5 +67,9 @@ D) Strife
 Answer: """).strip().lower()
 if question5 == "c":
     print(correct)
+    win += 1
 else:
     print(incorrect)
+
+print("")
+print("You scored... {} out of 5!".format(win))
