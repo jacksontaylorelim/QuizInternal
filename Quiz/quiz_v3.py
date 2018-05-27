@@ -16,8 +16,10 @@ You will be asked a series of multi-choice questions
 You will anwser either A, B, C or D
 Once you start you wont be able to quit until you've completed the quiz
 """)
+
 loop = ""
 while loop == "":
+    # checks if users input is valid
     def intcheck(question, low, high):
         valid = False
         while not valid:
@@ -36,12 +38,13 @@ while loop == "":
                 print()
     number = intcheck("How many questions would you like to be asked out of 5? ", 1, 5)
 
+    # generates random numbers and shuffles it's order
     orderlist = [i for i in range(10)]
     random.shuffle(orderlist)
 
     win = 0
     rounds = 0
-
+    # lists for questions, answers and options
     question = ["""
 What was Mario's brothers name?
 A) Wario
@@ -73,7 +76,7 @@ B) Zelda
 C) Link
 D) Strife
 Answer: """, """
-What is the is the blue fireball move called from 'Street Fighter'?
+What is the blue fireball move called from 'Street Fighter'?
 A) Spirit Bomb
 B) Blue Fireball
 C) Kamehameha
@@ -105,6 +108,7 @@ D) Infinite"""]
     answer = ['b', 'a', 'a', 'd', 'c', 'd', 'c', 'b', 'a', 'b']
     options = ['a', 'b', 'c', 'd']
 
+    # takes random question from list and checks if it's in options and if the answer is the same as the answer in the list
     for element in orderlist:
         question[element] = input(question[element]).strip().lower()
         if question[element] not in options:
