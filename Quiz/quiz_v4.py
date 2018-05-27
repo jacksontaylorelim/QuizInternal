@@ -284,8 +284,7 @@ Answer: """]
 # asks user what function should be used
 loop = False
 while loop == False:
-    mode = input("To choose a quiz type either 1 or 2; Retro Game Quiz (1) or Modern Game Quiz (under construction)"
-                 " (2): ").strip()
+    mode = input("To choose a quiz type either 1 or 2; Retro Game Quiz (1) or Modern Game Quiz (2): ").strip()
     if mode == "1":
         retro_quiz()
     elif mode == "2":
