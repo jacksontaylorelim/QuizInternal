@@ -1,11 +1,13 @@
 correct = "You got it... CORRECT!"
 incorrect = "You got it... incorrect"
 win = 0
+
 print("""Welcome to Jackson's RETRO GAME QUIZ
 You will be asked a series of multi-choice questions
 You will anwser either A, B, C or D
 At the end you will be given your score out of 5""")
 
+# all the questions
 question1 = input("""
 What was Mario's brothers name? Was it...
 A) Wario
